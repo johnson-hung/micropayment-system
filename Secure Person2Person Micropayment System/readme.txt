@@ -1,4 +1,4 @@
-[Computer Network Programming Assignment - part 3]
+[Computer Network Programming Project]
 (Linux socket programming in C/C++)
 SSL over TCP/IP
 
