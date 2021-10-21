@@ -1,4 +1,3 @@
-# Course Projects
 ## Secure Person2Person Micropayment System Personal, 11-12/2019
 ###### Course: Computer Networks and Applications
 ###### Language: C/C++
