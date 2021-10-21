@@ -1,4 +1,4 @@
-## Secure Person2Person Micropayment System Personal, 11-12/2019
+## Secure Person2Person Micropayment System (Personal, 11-12/2019)
 ###### Course: Computer Networks and Applications
 ###### Language: C/C++
 A system with a multithreaded server that stores clients’ user data (usernames, passwords,
