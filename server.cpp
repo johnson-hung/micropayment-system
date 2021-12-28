@@ -73,7 +73,7 @@ SSL_CTX* InitServerCTX(void)
 
 	OpenSSL_add_all_algorithms(); //load and register all crytos
 	SSL_load_error_strings(); //load all error messages
-	method = TLSv1_2_server_method(); //create new server-method instance
+	method = TLS_server_method(); //create new server-method instance
 	ctx = SSL_CTX_new(method); //create new context from method
 
 	if (ctx == NULL)
@@ -166,7 +166,7 @@ int main(int argc, char *argv[])
 	server.sin_port = htons(port);
 
 	//Bind
-	if(bind(socket_desc,(struct sockaddr *)&server, sizeof(server)) < 0)
+	if(::bind(socket_desc,(struct sockaddr *)&server, sizeof(server)) < 0)
 	{
 		cout<<"Bind failed."<<endl;
 	}
