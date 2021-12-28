@@ -3,8 +3,8 @@ CC:= g++
 TARGET1:= server
 TARGET2:= client
 
-INCLUDE:= -I./
-LIBS:= -lpthread -lstdc++ -L/usr/lib -lssl -lcrypto
+INCLUDE:= -I./ -I/opt/homebrew/Cellar/openssl@3/3.0.1/include
+LIBS:= -lpthread -lstdc++ -L/usr/lib -L/opt/homebrew/Cellar/openssl@3/3.0.1/lib -lssl -lcrypto
 
 CXXFLAGS:= -std=c++0x -g -Wall -D_REENTRANT
 
