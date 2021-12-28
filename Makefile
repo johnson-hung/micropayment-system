@@ -23,4 +23,5 @@ $(TARGET2): $(OBJECTS2)
 
 .PHONY : clean
 clean:
-	-rm -f $(OBJECTS) $(TARGET)
+	-rm -f $(OBJECTS1) $(TARGET1)
+	-rm -f $(OBJECTS2) $(TARGET2)
