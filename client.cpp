@@ -24,7 +24,7 @@ SSL_CTX* InitCTX(void)
 
 	OpenSSL_add_all_algorithms(); //load cryptos
 	SSL_load_error_strings(); //bring in and register error messages
-	method = TLSv1_2_client_method(); //create new client-method instance
+	method = TLS_client_method(); //create new client-method instance
 	ctx = SSL_CTX_new(method); //create new context
 	
 	if(ctx == NULL)
@@ -42,7 +42,7 @@ SSL_CTX* InitServerCTX(void)
 
         OpenSSL_add_all_algorithms(); //load and register all crytos
         SSL_load_error_strings(); //load all error messages
-        method = TLSv1_2_server_method(); //create new server-method instance
+        method = TLS_server_method(); //create new server-method instance
         ctx = SSL_CTX_new(method); //create new context from method
 
         if (ctx == NULL)
@@ -535,7 +535,7 @@ void *listening_handler(void *socket_desc)
 	s.sin_port = htons(extra_port); //Host to network short integer
 
 	//Bind
-	if(bind(thread_sock, (struct sockaddr *) &s, sizeof(s)) < 0)
+	if(::bind(thread_sock, (struct sockaddr *) &s, sizeof(s)) < 0)
 	{
 		cout<<"Bind "<<extra_port<<" failed"<<endl;
 		return 0;
