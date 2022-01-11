@@ -1,7 +1,16 @@
 # Secure Person2Person Micropayment System
 A system with a multithreaded server that stores clients’ user data (usernames, passwords,
 and balances), and accomplishes micropayment transactions by allowing one client to send
-encrypted messages to another client.
+encrypted messages to another client. 
+<br />
+Content:
+<br />
+
+- [Features](##features)
+- [Compile and Run](##compile-and-run)
+    - [Server](###server)
+    - [Client](###client)
+        - [Client Interface](###client-interface)
 
 ## Features
 - Allowed one client to send messages to another client through Linux socket implementation
