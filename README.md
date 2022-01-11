@@ -2,30 +2,26 @@
 A system with a multithreaded server that stores clients’ user data (usernames, passwords,
 and balances), and accomplishes micropayment transactions by allowing one client to send
 encrypted messages to another client. 
-<br />
-Content:
-<br />
-
-- [Features](##features)
-- [Compile and Run](##compile-and-run)
-    - [Server](###server)
-    - [Client](###client)
-        - [Client Interface](###client-interface)
+### Content
+- [Features](#features)
+- [Compile the Program](#compile-the-program)
+- [Server](#server)
+- [Client](#client)
+    - [Client Interface](#client-interface)
 
 ## Features
 - Allowed one client to send messages to another client through Linux socket implementation
 - Used POSIX Threads library to achieve thread creation, synchronization and termination
 - Imported OpenSSL library for basic cryptographic functions to secure client communications
 
-## Compile and Run
+## Compile the Program
 You may execute the following commands in the terminal to compile all necessary files:
 ```
 $ make server
 $ make client
 ```
 
-After compiling the program, server and client could be executed in the following ways:
-### Server
+## Server
 To execute server program, you will have to set a port number (range: `1024`-`65535`).
 
 - Format:
@@ -39,7 +35,7 @@ To execute server program, you will have to set a port number (range: `1024`-`65
     If the server is successfully set up, the server will create 5 threads and wait for connections. (threadpool implemented)
     
 
-### Client
+## Client
 To execute client program, you will have to set `IP_address` and `portNumber` for the client 
 (same as server's `IP_address` and `portNumber`).
 
@@ -54,7 +50,7 @@ To execute client program, you will have to set `IP_address` and `portNumber` fo
     ```
     , where `IP_address` is localhost (`127.0.0.1`) and `portNumber` is `1024`
 
-#### Client Interface
+### Client Interface
 If a client successfully connects to the server, a menu will show up:
 ```
 ===[Micropayment System]===
