@@ -46,7 +46,7 @@ To execute client program, you will have to set `IP_address` and `portNumber` fo
     , where `IP_address` is localhost (`127.0.0.1`) and `portNumber` is `1024`
 
 #### Client Interface
-If a client successfully connects to server, a menu will show up:
+If a client successfully connects to the server, a menu will show up:
 ```
 ===[Micropayment System]===
 |                         |
@@ -59,17 +59,16 @@ If a client successfully connects to server, a menu will show up:
 Then, a client may call the commands introduced below to navigate:
 - `r`: Register an account by providing an username
 - `i`: Login by entering your account username and setting a temporary port to get online
-- `List`: Client would be able to get account balance and list of online users by executing this command
-- `Exit`: Close the socket and exit program
-
+- `List`: Display account balance and a list of online users
+- `Exit`: Close socket and exit the running program
 - `<payer_username>#<payment>#<payee_username>`: Send money to a payee, the payee will receive a message:
     ```
     Incoming payment transaction:
     <payer_username>#<payment>#<payee_username>
     ```
-    Once the message is forwarded to the server to handle the money transaction, payee will then see the notification:
+    Once the message is forwarded to the server to handle the transaction, payee will then see the message:
     ```
     You got <payment> from <payer_username>
     Current account balance: <money>
     ```
-    (Payer may call `List` to make sure that transaction was properly handled)
+    (Payer may call `List` to make sure that the transaction was properly handled)
